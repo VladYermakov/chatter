@@ -1,6 +1,7 @@
 <%= form_for :session, url: sessions_path do |f| %>
   <%= f.label :username, 'Enter a username' %><br/>
-  <%= f.text_field :username %>
+  <%= f.text_field :username %><br/>
+  <%= f.label :room, 'Choose the room' %>
   <%= f.select :room, (1..10).to_a %> <br/>
   <%= f.submit 'Start chatting' %>
 <% end %>
