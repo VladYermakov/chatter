@@ -3,5 +3,5 @@
   <%= f.text_field :username %><br/>
   <%= f.label :room, 'Choose the room' %>
   <%= f.select :room, (1..10).to_a %> <br/>
-  <%= f.submit 'Start chatting' %>
+  <%= f.submit 'Start chatting', class: "btn btn-primary btn-sm" %>
 <% end %>
