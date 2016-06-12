@@ -1,3 +1,18 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#chat-speak {
+  width: 485px;
+  height: 30px;
+  border: 1px solid #4682B4;
+  border-radius: 5px;
+  margin: 5px;
+  text-indent: 5px;
+}
+
+#messages {
+  height: 460px;
+  overflow-y: scroll;
+  text-align: left;
+}

@@ -1,7 +1,19 @@
 class SessionsController < ApplicationController
+  before_action :signed_in_user, only: :destroy
+  before_action :clear_cookies
+
   def create
-  	cookies.signed[:username] = params[:session][:username]
-    cookies.signed[:room]     = params[:session][:room]
-  	redirect_to messages_path
+    user = User.find_by(name: params[:session][:name].downcase)
+    if user && user.authenticate(params[:session][:password])
+      sign_in user
+      redirect_to root_path
+    else
+      redirect_to sign_path
+    end
+  end
+
+  def destroy
+    sign_out
+    redirect_to root_path
   end
 end

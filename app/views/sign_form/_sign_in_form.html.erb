@@ -1,0 +1,22 @@
+<div class="buttons">
+
+  <%= button_tag 'Sign in', type: 'button', id: 'sign-in', class: 'btn btn-sm btn-active' %>
+  <%= form_for :sign_up_form, url: sign_up_form_path, remote: true do |f| %>
+
+    <%= f.submit 'Sign up', id: 'sign-up', class: 'btn btn-inactive btn-sm' %>
+
+  <% end %>
+
+</div>
+
+<%= form_for :session, url: sign_in_path do |f| %>
+
+  <%= f.label :name, 'Enter a username' %> <br/>
+  <%= f.text_field :name %> <br/>
+
+  <%= f.label :password, 'Enter password' %> <br/>
+  <%= f.password_field :password %><br/>
+
+  <%= f.submit 'Sign in', class: 'btn btn-primary btn-sm' %>
+
+<% end %>

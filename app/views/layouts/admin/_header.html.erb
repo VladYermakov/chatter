@@ -1,0 +1,17 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to 'chatter', root_path, id: 'logo' %>
+      <nav>
+        <ul class="nav pull-right">
+          <% if signed_in_admin? %>
+            <li><%= link_to 'Sign out', admin_sign_out_path, method: 'delete' %></li>
+            <li><%= link_to 'Users', admin_users_path %></li>
+            <li><%= link_to 'Messages', admin_messages_path %></li>
+            <li><%= link_to 'Home', admin_index_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

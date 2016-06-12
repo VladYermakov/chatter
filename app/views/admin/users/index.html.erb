@@ -1,0 +1,17 @@
+<table class="users">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Admin?</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td class="id"><%= user.id %></td>
+      <td><%= user.original_name %></td>
+      <td><%= user.email %></td>
+      <td><%= check_box_tag :admin, 'admin', user.admin, class: 'user_admin' %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Create user', admin_users_new_path, class: 'btn btn-primary', id: 'btn-new-user' %>

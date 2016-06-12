@@ -7,19 +7,9 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    ActionCable.server.broadcast "messages_room_#{room}",
-                message: render_message(data['message'])
+    user = User.find_by original_name: current_user
+    message = Message.new user: user, room_id: room, content: data['message']
+    message.save!
   end
-
-  private
-
-    def render_message(message)
-      ApplicationController.render(
-      	partial: 'messages/message',
-        locals: {
-            message: message,
-            username: current_user
-        })
-    end
 
 end

@@ -5,24 +5,118 @@
 }
 
 #outer {
-  width: auto;
+  min-width: 700px;
+  min-height: 550px;
   display: inline-block;
   border-radius: 5px;
   border: 3px solid #4682B4;
 }
 
-#session_username,
-#chat-speak {
-  width: 485px;
-  height: 30px;
-  border: 1px solid blue;
-  border-radius: 5px;
-  margin: 5px;
-  text-indent: 5px;
+#sign-in,
+#sign-up {
+  width: 238px;
+  border-radius: 5px 5px 0 0;
 }
 
-#messages {
-  height: 550px;
-  overflow-y: scroll;
-  text-align: left;
+.buttons {
+  position: relative;
+
+  * {
+    display: inline;
+    margin: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #4682B4;
+    z-index: 1;
+  }
+
+  .btn-active {
+    background-color: white;
+    border: 1px solid #4682B4;
+    border-bottom-color: white;
+    z-index: 2;
+    pointer-events: none;
+    cursor: default;
+    position: relative;
+  }
+
+  .btn-inactive {
+    background-color: #4682B4;
+    border: 1px solid #4682B4;
+    color: white;
+    z-index: 0;
+    &:hover {
+      color: lightgray;
+    }
+  }
+}
+
+header {
+  background-color: #4682B4;
+  margin: 0;
+}
+
+.body {
+  margin-top: 50px;
+  vertical-align: middle;
+}
+
+footer {
+  border-top: 1px solid #4682B4;
+  position: fixed;
+  bottom: 5px;
+  width: 99%;
+
+  p {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 0;
+
+  &:hover {
+    color: #DADADA;
+    text-decoration: none;
+  }
+
+}
+
+.pull-right li{
+  float: right;
+  display: inline;
+  height: 30px;
+  background-color: #4682B4;
+  margin-top: 0;
+
+  a {
+    padding: 0 15px;
+    color: white;
+
+    &:hover {
+      background-color: #459cda;
+      margin: 0;
+      padding: 5px 20px;
+    }
+  }
+}
+
+.g-hidden {
+  display: none;
 }

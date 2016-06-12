@@ -1,0 +1,23 @@
+<table class="messages">
+
+  <tr>
+    <th>ID</th>
+    <th>Content</th>
+    <th>User</th>
+    <th>Room</th>
+  </tr>
+
+  <% @messages.each do |message| %>
+
+    <tr>
+
+      <td><%= message.id %></td>
+      <td><%= message.content %></td>
+      <td><%= message.user.original_name %></td>
+      <td><%= message.room_id %></td>
+
+    </tr>
+
+  <% end %>
+
+</table>

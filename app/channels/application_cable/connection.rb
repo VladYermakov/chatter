@@ -5,7 +5,11 @@ module ApplicationCable
   	identified_by :current_user, :room
 
   	def connect
-  	  self.current_user, self.room = cookies.signed[:username], cookies.signed[:room]
+			if cookies[:remember_token].nil? || cookies[:room].nil?
+				reject_unauthorized_connection
+			else
+  	  	self.current_user, self.room = User.find_by(remember_token: User.encrypt(cookies[:remember_token])).original_name, cookies[:room]
+			end
   	end
   end
 end

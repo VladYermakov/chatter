@@ -1,0 +1,5 @@
+<% if signed_in_admin? %>
+  <p id="admin-panel">Admin panel</p>
+<% else %>
+  <%= render 'admin/sessions/new'%>
+<% end %>

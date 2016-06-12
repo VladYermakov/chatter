@@ -1,0 +1,11 @@
+<%= form_for :admin_session, url: admin_signin_path do |f| %>
+
+    <%= f.label :name, 'Enter a username' %> <br/>
+    <%= f.text_field :name %> <br/>
+
+    <%= f.label :password, 'Enter password' %> <br/>
+    <%= f.password_field :password %><br/>
+
+    <%= f.submit 'Sign in', class: 'btn btn-primary btn-sm' %>
+
+<% end %>

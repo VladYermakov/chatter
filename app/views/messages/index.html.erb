@@ -1,3 +1,3 @@
-<p id="info">Signed in as @<%= cookies.signed[:username] %> in <%= cookies.signed[:room] %> room.</p>
+<p id="info">Signed in as @<%= current_user.original_name %> in <%= cookies[:room] %> room.</p>
 <div id="messages"></div>
 <%= text_field_tag :body, '', id: 'chat-speak' %>
