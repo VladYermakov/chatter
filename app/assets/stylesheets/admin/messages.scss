@@ -1,0 +1,19 @@
+// Place all the styles related to the admin/messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.messages {
+  border: 1px solid #4682B4;
+  width: 98%;
+
+  td,
+  th {
+    border: 1px solid #4682B4;
+    padding: 5px 10px;
+    text-align: center;
+    &:nth-child(2) {
+      max-width: 400px;
+      text-align: left;
+    }
+  }
+}

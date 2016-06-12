@@ -1,0 +1,21 @@
+<% if signed_in? %>
+  <div id="hello">
+    <h1>Hello, <%= current_user.original_name %></h1>
+
+    <p> Start chat? </p>
+    <%= button_tag 'Start', type: 'button', id: 'start-btn', class: 'btn btn-primary' %>
+  </div>
+
+  <div class="g-hidden outer">
+    <div class="box-modal" id="start-msg">
+      <div class="box-modal_close arcticmodal-close">X</div>
+      <%= form_for :messages, url: messages_path do |f| %>
+        <%= f.label :room, 'Select room: ' %>
+        <%= f.select :room, get_variants %><br/>
+        <%= f.submit 'Start chatting', class: 'btn btn-primary', id: 'start-chat' %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <%= render 'sessions/new' %>
+<% end %>
