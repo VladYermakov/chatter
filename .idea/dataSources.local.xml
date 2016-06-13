@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails chatter: development" uuid="98107ce7-011d-4573-93d7-6d771af9b668" />
+    <data-source name="Rails chatter: development" uuid="334783f6-717a-44b3-a824-eb3b3d68c36d">
+      <user-name>postgres</user-name>
+      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <schema-pattern>course_work_development.pg_catalog course_work_development.public</schema-pattern>
+      <default-schemas>course_work_development.public</default-schemas>
+    </data-source>
+    <data-source name="Rails chatter: test" uuid="1d747be2-8102-4665-a9c9-f6c3363d9539">
+      <user-name>postgres</user-name>
+      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <schema-pattern>course_work_test.pg_catalog course_work_test.public</schema-pattern>
+      <default-schemas>course_work_test.public</default-schemas>
+    </data-source>
+    <data-source name="Rails chatter: production" uuid="4749dee0-567c-4e98-8738-2eace36af869">
+      <first-sync>true</first-sync>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+    </data-source>
   </component>
 </project>

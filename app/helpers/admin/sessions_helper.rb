@@ -12,8 +12,8 @@ module Admin
     end
 
     def admin_user
-      admin_remember_token = User.encrypt(cookies[:admin_remember_token])
-      @admin_user ||= User.remembered_by :admin, remember_token: admin_remember_token
+      remember_token = User.encrypt(cookies[:admin_remember_token])
+      @admin_user ||= User.remembered_by :admin, remember_token
     end
 
     def signed_in_admin?
