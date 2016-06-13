@@ -5,7 +5,7 @@
 }
 
 #outer {
-  min-width: 700px;
+  min-width: 500px;
   min-height: 550px;
   display: inline-block;
   border-radius: 5px;
@@ -119,4 +119,9 @@ footer {
 
 .g-hidden {
   display: none;
+}
+
+.alert {
+  color: #B00100;
+  position: relative;
 }

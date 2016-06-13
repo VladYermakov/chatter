@@ -13,7 +13,7 @@ module Admin
 
     def admin_user
       admin_remember_token = User.encrypt(cookies[:admin_remember_token])
-      @admin_user ||= User.find_by admin_remember_token: admin_remember_token
+      @admin_user ||= User.remembered_by :admin, remember_token: admin_remember_token
     end
 
     def signed_in_admin?
@@ -30,7 +30,7 @@ module Admin
 
     def signed_in_admin
       unless signed_in_admin?
-        redirect_to admin_index_path, notice: 'Please sign in.'
+        redirect_to admin_index_path, alert: 'Please sign in.'
       end
     end
   end

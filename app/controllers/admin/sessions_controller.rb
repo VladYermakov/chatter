@@ -10,7 +10,7 @@ module Admin
         sign_in_admin user
         redirect_to admin_index_path
       else
-        redirect_to admin_index_path, notice: 'Invalid username/password'
+        redirect_to admin_index_path, alert: 'Invalid username/password'
       end
     end
 

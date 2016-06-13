@@ -12,6 +12,9 @@
 <%= render 'layouts/admin/header' %>
 <div class="text-center body">
   <div id="outer">
+    <% unless flash[:alert].nil? %>
+      <p class="alert"><%= flash[:alert] %></p>
+    <% end %>
     <%= yield %>
   </div>
 </div>

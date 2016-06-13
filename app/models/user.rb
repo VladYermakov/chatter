@@ -6,6 +6,14 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true,
                                     format: { with: /\A[a-zA-Z0-9\-\+\.]+@([a-zA-Z0-9\-]{2,20}\.)+[a-zA-Z]{2,6}\z/i }
 
+  scope :remembered_by, -> (admin, options) do
+
+    sql = 'remember_token = :remember_token'
+    sql = 'admin_' + sql if admin == :admin
+
+    where sql, options
+  end
+
   before_create do
     self.original_name = self.name
     self.name          = self.name.downcase

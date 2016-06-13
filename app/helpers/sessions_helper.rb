@@ -8,7 +8,7 @@ module SessionsHelper
 
   def current_user
     remember_token = User.encrypt(cookies[:remember_token])
-    @current_user ||= User.find_by remember_token: remember_token
+    @current_user ||= User.remembered_by :user, remember_token: remember_token
   end
 
   def current_user=(user)
@@ -27,7 +27,7 @@ module SessionsHelper
 
   def signed_in_user
     unless signed_in?
-      redirect_to sign_path, notice: "Please sign in."
+      redirect_to sign_path, alert: "Please sign in."
     end
   end
 end

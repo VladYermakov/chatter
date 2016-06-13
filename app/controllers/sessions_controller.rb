@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_to root_path
     else
-      redirect_to sign_path
+      redirect_to sign_path, alert: 'Invalid username/password'
     end
   end
 
