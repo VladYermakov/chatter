@@ -27,7 +27,7 @@ module SessionsHelper
 
   def signed_in_user
     unless signed_in?
-      redirect_to sign_path, alert: "Please sign in."
+      redirect_to sign_path, alert: 'Please sign in.'
     end
   end
 end

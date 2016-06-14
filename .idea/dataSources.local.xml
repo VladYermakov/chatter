@@ -14,9 +14,10 @@
       <default-schemas>course_work_test.public</default-schemas>
     </data-source>
     <data-source name="Rails chatter: production" uuid="4749dee0-567c-4e98-8738-2eace36af869">
-      <first-sync>true</first-sync>
       <user-name>postgres</user-name>
       <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <schema-pattern>course_work_production.pg_catalog course_work_production.public</schema-pattern>
+      <default-schemas>course_work_production.public</default-schemas>
     </data-source>
   </component>
 </project>
