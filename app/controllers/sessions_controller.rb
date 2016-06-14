@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   before_action :signed_in_user, only: :destroy
-  before_action :clear_cookies
 
   def create
     user = User.find_by(name: params[:session][:name].downcase)

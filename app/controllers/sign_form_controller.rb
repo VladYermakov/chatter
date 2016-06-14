@@ -1,6 +1,4 @@
 class SignFormController < ApplicationController
-  before_action :clear_cookies
-
   def sign_in
     respond_to do |format|
       format.js

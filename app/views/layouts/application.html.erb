@@ -10,6 +10,7 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <p id="page"><%= params[:controller] %></p>
     <div class="text-center body">
       <div id="outer">
         <% unless flash[:alert].nil? %>

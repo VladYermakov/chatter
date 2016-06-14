@@ -1,5 +1,4 @@
 class Message < ApplicationRecord
-
   validates :content, presence: true
 
   belongs_to :user
@@ -8,5 +7,4 @@ class Message < ApplicationRecord
   after_create_commit do
     MessageBroadcastJob.perform_now self.user.name, self.room_id, self.content
   end
-
 end
