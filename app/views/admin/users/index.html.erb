@@ -10,7 +10,7 @@
       <td class="id"><%= user.id %></td>
       <td><%= user.original_name %></td>
       <td><%= user.email %></td>
-      <td><%= check_box_tag :admin, 'admin', user.admin, class: 'user_admin' %></td>
+      <td><%= check_box_tag :admin, 'admin', user.admin, class: 'user_admin', disabled: admin_user == user %></td>
     </tr>
   <% end %>
 </table>

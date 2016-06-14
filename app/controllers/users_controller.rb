@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :user_params, only: :create
-  before_action :clear_cookies
 
   def create
     @user = User.new user_params
