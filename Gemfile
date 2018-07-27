@@ -7,7 +7,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2.2'
-gem 'jquery-rails', '~> 4.1.1'
+gem 'jquery-rails', '~> 4.3.3'
 gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 3.0'
 gem 'bcrypt', '~> 3.1.7'
@@ -19,7 +19,7 @@ end
 
 group :development do
   gem 'web-console'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen', '~> 3.1.5'
 end
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
