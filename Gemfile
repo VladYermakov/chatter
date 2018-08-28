@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '>= 5.0.0.beta4', '< 5.3'
-gem 'pg', '~> 0.18.4'
+gem 'pg', '~> 1.1.1'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
