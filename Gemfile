@@ -19,7 +19,7 @@ end
 
 group :development do
   gem 'web-console'
-  gem 'listen', '~> 3.1.5'
+  gem 'listen', '~> 3.3.1'
 end
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
